@@ -1,0 +1,17 @@
+{
+  "name": "wallpaper-website",
+  "description": "A simple website to display wallpapers from a GitHub repository",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.8"
+  },
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "gabrielmslima",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
