@@ -19,6 +19,12 @@ a {
     text-decoration: none;
 }
 
+.note {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    font-style: italic;
+}
+
 .download-all {
     color: #339c87;
 }
@@ -35,11 +41,20 @@ a {
 }
 
 .gallery img:hover {
-    transform: scale(2);
+    transform: scale(1.5);
     transition: transform 0.3s;
 }
 
-.gallery-container {
-    padding: 20px;
-    height: 100vh;
-}
+.pagination .page-link {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+  }
+  
+  .pagination .page-link:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .pagination .active .page-link {
+    background-color: #27632a; /* Even darker green for active page */
+    border-color: #27632a;
+  }
