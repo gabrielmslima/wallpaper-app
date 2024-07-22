@@ -19,6 +19,12 @@ a {
     text-decoration: none;
 }
 
+.note {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    font-style: italic;
+}
+
 .download-all {
     color: #339c87;
 }
@@ -42,4 +48,5 @@ a {
 .gallery-container {
     padding: 20px;
     height: 100vh;
+    border-radius: 10px;
 }
