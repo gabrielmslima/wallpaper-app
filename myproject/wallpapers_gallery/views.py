@@ -1,8 +1,7 @@
 import requests
 from django.shortcuts import render
-
 from django.core.cache import cache
-import requests
+from django.core.paginator import Paginator
 
 def fetch_images_from_github(repo_url):
     # Try to get cached data
@@ -21,7 +20,10 @@ def fetch_images_from_github(repo_url):
     return images_info
 
 def wallpapers_view(request):
-    repo_url = "https://api.github.com/repos/gabrielmslima/wallpapers/contents/images"
-    images_info = fetch_images_from_github(repo_url)
-    context = {'images_info': images_info}
-    return render(request, 'wallpapers_gallery/gallery.html', context)
+    images_info = fetch_images_from_github("https://api.github.com/repos/gabrielmslima/wallpapers/contents/images")
+    
+    paginator = Paginator(images_info, 36)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    
+    return render(request, 'wallpapers_gallery/gallery.html', {'page_obj': page_obj})
