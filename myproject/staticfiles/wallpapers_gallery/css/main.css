@@ -6,22 +6,25 @@
 
 body {
     font-family: 'Pixelify Sans', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #1f1f1f;
     margin: 0;
     padding: 0;
 } 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+p {
+    color: #fff;
 }
 
-h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+a {
+    text-decoration: none;
+}
+
+.download-all {
+    color: #339c87;
+}
+
+.download-all:hover {
+    color: #2a8270;
 }
 
 .gallery img {
@@ -34,4 +37,9 @@ h1 {
 .gallery img:hover {
     transform: scale(2);
     transition: transform 0.3s;
+}
+
+.gallery-container {
+    padding: 20px;
+    height: 100vh;
 }
