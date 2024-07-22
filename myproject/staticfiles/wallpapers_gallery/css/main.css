@@ -19,6 +19,17 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+}
+
+footer {
+    background-color: #1c1c1c;
+    font-size: 1.2rem;
+}
+
 .note {
     font-family: 'Times New Roman', Times, serif;
     margin-top: 40px;
@@ -43,18 +54,5 @@ a {
 .gallery img:hover {
     transform: scale(1.5);
     transition: transform 0.3s;
+    box-shadow: 0 0 10px #339c87;
 }
-
-.pagination .page-link {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text color */
-  }
-  
-  .pagination .page-link:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-  .pagination .active .page-link {
-    background-color: #27632a; /* Even darker green for active page */
-    border-color: #27632a;
-  }
