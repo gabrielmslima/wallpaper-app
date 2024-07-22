@@ -1,4 +1,4 @@
-#!/home/gabriel/dev/wallpapers-gallery/bin/python3
+#!/home/gabriel/dev/CLIs/wallpaper-app/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

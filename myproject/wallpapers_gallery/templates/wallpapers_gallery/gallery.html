@@ -12,20 +12,33 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'wallpapers_gallery/css/custom-fonts.css' %}"
+      href="{% static 'wallpapers_gallery/css/main.css' %}"
     />
   </head>
-  <body class="pixelify-sans-400">
-    <div class="container">
-      <h1 class="my-4">Image Gallery</h1>
+  <body>
+    <div class="container-fluid p-5">
+      <div class="row">
+        <div class="col">
+          <p class="h2 text-center">Personal Wallpapers Gallery</p>
+          <a href="/download">
+            <p class="h4 text-center download-all">Download all images!</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container bg-dark gallery-container">
       <div class="row gallery">
-        {% for image in images %}
-        <div class="col-lg-3 col-md-4 col-6 mb-4">
+        {% for image in images_info %}
+        <div class="col-lg-2 col-md-3 col-sm-5">
           <img
             src="{{ image.download_url }}"
             alt="{{ image.name }}"
             class="img-fluid"
           />
+          <div class="container">
+            <p class="text-center fs-12">{{ image.name }}</p>
+          </div>
         </div>
         {% endfor %}
       </div>
